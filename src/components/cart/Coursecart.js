@@ -34,6 +34,7 @@ export default class Coursecart extends Component {
                       data-item-price={node.price}
                       data-item-image={node.image.gatsbyImageData}
                       data-item-name={node.title}
+                      data-item-url="https://gatsbylcoproject.netlify.app/"
                       className="btn btn-warning snipcart-add-item"
                     >
                       Buy Now
