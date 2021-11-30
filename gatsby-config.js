@@ -1,4 +1,4 @@
-require("dotenv").config({ path: `.env.development` })
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
 module.exports = {
   siteMetadata: {
@@ -48,7 +48,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-snipcart",
       options: {
-        apiKey: "YOUR_SNIPCART_KEY",
+        apiKey: process.env.SNIPCART_KEY,
         autopop: true,
       },
     },
