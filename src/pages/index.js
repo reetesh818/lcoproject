@@ -20,10 +20,8 @@ const IndexPage = ({ data }) => (
       heroclass="hero-background"
       image={data.img.childImageSharp.fluid}
     />
-    <Infoblock heading="About Us" />
     <Coursecart courses={data.mycourses} />
     <Bundlecart bundles={data.mybundles} />
-    <DualInfoBlock heading="Our Team" />
   </Layout>
 )
 

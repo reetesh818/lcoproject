@@ -8,7 +8,7 @@ function TeamPhotoSection({ heading }) {
       <div className="row my-3">
         <div className="col-10 col-sm-10 mx-auto">
           <div class="card-group">
-            <div class="card border-primary">
+            <div class="card">
               <img
                 src="https://images.pexels.com/photos/761304/pexels-photo-761304.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 class="card-img-top"
