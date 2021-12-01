@@ -18,11 +18,7 @@ export default class Navbar extends Component {
         text: "About",
         url: "/about",
       },
-      {
-        id: 3,
-        text: "Services",
-        url: "/services",
-      },
+
       {
         id: 3,
         text: "Contact",
@@ -65,7 +61,7 @@ export default class Navbar extends Component {
               </li>
             ))}
             <li className="nav-item">
-              <Link to="/" className="nav-link text-white ">
+              <Link to="/" className="nav-link text-white snipcart-checkout">
                 <FaCartArrowDown className="cart-icon" />
               </Link>
             </li>

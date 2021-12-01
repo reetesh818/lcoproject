@@ -14,7 +14,8 @@
   flex-direction: column;
 }
 
-.about-background {
+.about-background,
+.contact-background {
   min-height: 30vh;
   display: flex;
   justify-content: center;

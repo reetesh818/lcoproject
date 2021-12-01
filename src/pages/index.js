@@ -1,6 +1,5 @@
 import * as React from "react"
-import { Link, graphql, StaticQuery } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -10,6 +9,7 @@ import Infoblock from "../components/Reusable/Infoblock"
 import DualInfoBlock from "../components/Reusable/DualInfoBlock"
 
 import Coursecart from "../components/cart/Coursecart"
+import Bundlecart from "../components/cart/Bundlecart"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -22,6 +22,7 @@ const IndexPage = ({ data }) => (
     />
     <Infoblock heading="About Us" />
     <Coursecart courses={data.mycourses} />
+    <Bundlecart bundles={data.mybundles} />
     <DualInfoBlock heading="Our Team" />
   </Layout>
 )
@@ -45,6 +46,18 @@ export const query = graphql`
           description {
             description
           }
+          image {
+            gatsbyImageData(height: 140, width: 230)
+          }
+        }
+      }
+    }
+    mybundles: allContentfulBundles {
+      edges {
+        node {
+          id
+          title
+          price
           image {
             gatsbyImageData(height: 140, width: 230)
           }
